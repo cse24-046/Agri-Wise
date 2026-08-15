@@ -50,4 +50,11 @@
 .premium-card p{max-width:860px}
 .premium-card .btn{padding:10px 16px}
 .premium-card .muted.small{opacity:.9}
+/* Pricing card styles */
+.pricing-grid{margin-top:10px}
+.price-card{display:flex;flex-direction:column;gap:12px;align-items:flex-start;justify-content:space-between}
+.price-card .price{font-size:28px;color:var(--green);display:block}
+.price-card h3{margin:0;color:var(--green)}
+.price-card p{margin:0}
+.price-card .btn{width:100%}
 @keyframes dot{0%{transform:translateY(0);opacity:.4}50%{transform:translateY(-6px);opacity:1}100%{transform:translateY(0);opacity:.4}}
