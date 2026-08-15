@@ -66,42 +66,35 @@ document.addEventListener("DOMContentLoaded",()=>{
 					if(question){ ask(question); input.value = "" }
 			});
 
-				// Inject premium subscription section before the footer (if not already present)
-				if(!document.querySelector('.premium-offer')){
-					const footer = document.querySelector('footer');
-					if(footer && footer.parentNode){
-						const sec = document.createElement('section');
-						sec.className = 'premium-offer section';
-						sec.innerHTML = `
-							<div class="container">
-								<div class="premium-card feature-card">
-									<div class="panel-head">
-										<div>
-											<span class="eyebrow">PREMIUM AI</span>
-											<h2>Agri-Wise Premium — Insights + Financial Planning</h2>
-										</div>
-										<span class="tag">Upgrade</span>
-									</div>
-									<p class="muted">Upgrade to Agri-Wise Premium for expanded AI briefings that combine seasonal crop intelligence with simple financial planning: cost estimates, revenue scenarios, break-even analysis and risk-adjusted recommendations.</p>
-									<div class="pricing-grid" style="margin-top:18px;display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:stretch">
-										<div class="price-card feature-card">
-											<h3>Monthly</h3>
-											<strong class="price">P70 <small>/ month</small></strong>
-											<p class="muted small">Billed monthly. Cancel anytime.</p>
-											<a class="btn btn-primary" href="auth.html?plan=premium&billing=monthly">Subscribe P70/mo</a>
-										</div>
-										<div class="price-card feature-card">
-											<h3>Yearly</h3>
-											<strong class="price">P500 <small>/ year</small></strong>
-											<p class="muted small">Save ~40% vs monthly. Billed annually.</p>
-											<a class="btn btn-outline" href="auth.html?plan=premium&billing=yearly">Subscribe P500/yr</a>
-										</div>
-									</div>
-									<p class="muted small" style="margin-top:12px">Disclaimer: Premium features provide general financial planning tools and scenario estimates. This is not personalised financial advice — consult a licensed financial adviser for tailored recommendations.</p>
-								</div>
+
+				// Replace the IMPORTANT NOTE panel with the Premium subscription panel
+				(function replaceImportantNote(){
+					const panels = Array.from(document.querySelectorAll('.panel'));
+					const important = panels.find(p=>{
+						const label = p.querySelector('.eyebrow');
+						return label && label.textContent.trim().toUpperCase() === 'IMPORTANT NOTE';
+					});
+					if(!important) return;
+					important.classList.add('premium-panel');
+					important.innerHTML = `
+						<span class="eyebrow">PREMIUM AI</span>
+						<h3>Subscribe for Financial Advice</h3>
+						<p class="muted small">Upgrade to Agri-Wise Premium for expanded AI briefings that include financial planning tools: cost estimates, revenue scenarios, break-even analysis and risk-adjusted recommendations.</p>
+						<div class="pricing-grid" style="margin-top:12px;display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:stretch">
+							<div class="price-card feature-card">
+								<h4>Monthly</h4>
+								<strong class="price">P70 <small>/ month</small></strong>
+								<p class="muted small">Billed monthly. Cancel anytime.</p>
+								<a class="btn btn-primary" href="auth.html?plan=premium&billing=monthly">Subscribe P70/mo</a>
 							</div>
-						`;
-						footer.parentNode.insertBefore(sec, footer);
-					}
-				}
+							<div class="price-card feature-card">
+								<h4>Yearly</h4>
+								<strong class="price">P500 <small>/ year</small></strong>
+								<p class="muted small">Billed annually. Save vs monthly.</p>
+								<a class="btn btn-outline" href="auth.html?plan=premium&billing=yearly">Subscribe P500/yr</a>
+							</div>
+						</div>
+						<p class="muted small" style="margin-top:10px">Disclaimer: Premium features provide general financial planning tools and scenario estimates. This is not personalised financial advice — consult a licensed financial adviser for tailored recommendations.</p>
+					`;
+				})();
 	});
