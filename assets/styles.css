@@ -30,7 +30,10 @@
 
 /* Brand/logo: show image if present, keep text fallback */
 .brand{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--green);letter-spacing:-.02em}
-.brand-logo{height:36px;display:block;width:auto}
+.brand-logo{height:56px;display:block;width:auto}
+
+/* Welcome message color using swatch reference (gold) */
+.dashboard-top #welcomeMessage{color:var(--gold);}
 
 /* Typing / thinking indicator for AI responses */
 .chat.bot.typing{background:white;border:1px solid var(--line);display:inline-flex;align-items:center;padding:10px 12px;border-radius:11px}
