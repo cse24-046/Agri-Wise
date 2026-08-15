@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Marketplace | Botswana Harvest Hub</title><link rel="stylesheet" href="assets/styles.css"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet"></head>
+<body data-page="market">
+<header class="site-header"><div class="container nav-wrap"><a class="brand" href="index.html"><span class="brand-mark">BH</span>Botswana Harvest Hub</a><button class="mobile-toggle" aria-label="Open menu"><i class="fa fa-bars"></i></button><nav class="nav"><a href="index.html">Home</a><a data-role="farmer" href="farmer.html">Farmer Dashboard</a><a class="active" href="market.html">Marketplace</a><a href="#profile">My profile</a><a href="#" data-account>Sign out</a></nav></div></header>
+<main><section class="market-hero"><div class="container"><span class="eyebrow">BOTSWANA MARKETPLACE</span><h1>Fresh produce from farmers near you.</h1><p>Search stalls, filter by location and crop, then simulate a wallet checkout.</p></div></section>
+<section class="section marketplace-section"><div class="container"><div class="filter-panel"><div><label>Location<select id="filterLocation"></select></label></div><div><label>Produce<select id="filterProduce"></select></label></div><div><label>Search<input id="filterSearch" type="search" placeholder="Farmer or stall name"></label></div><button id="resetFilters" class="btn btn-outline">Reset</button></div><div class="marketbar"><h2 id="resultCount">—</h2><span id="marketSeason" class="tag">—</span></div><div id="stallGrid" class="stall-grid"></div><div id="emptyMarket" class="empty-state hidden">No stalls match your filters.</div></div></section>
+<section class="section profile-section" id="profile"><div class="container"><div class="section-heading"><div><span class="eyebrow">CONSUMER PROFILE</span><h2>Save payment details once.</h2></div></div><form id="profileForm" class="panel"><div class="form-grid"><label>Full name<input id="profileName" placeholder="Naledi Motlhabane"></label><label>Home location<select id="profileLocation"></select></label><label>Orange Money<input id="profileOrange" placeholder="76 000 000"></label><label>Smega<input id="profileSmega" placeholder="71 000 000"></label><label>MyZaka<input id="profileMyzaka" placeholder="74 000 000"></label><label>Payment type
+<select id="profilePaymentType">
+<option value="wallet">Mobile Wallet</option>
+<option value="bank">Bank</option>
+</select>
+</label>
+<label id="profileBankWrap" class="payment-dependent hidden">Bank
+<select id="profileBank">
+<option>FNB Botswana</option>
+<option>ABSA Botswana</option>
+<option>Stanbic Bank</option>
+<option>Standard Chartered</option>
+<option>Bank Gaborone</option>
+</select>
+</label>
+<label id="profileWalletWrap" class="payment-dependent">Mobile wallet
+<select id="profileWallet">
+<option value="Orange Money">Orange Money</option>
+<option value="MyZaka">MyZaka</option>
+<option value="Smega">Smega</option>
+</select>
+</label>
+<label>Account / mobile number
+<input id="profilePaymentDetails" placeholder="e.g. 76 000 000 or bank account number">
+</label></div><button class="btn btn-primary" type="submit">Save profile</button></form></div></section></main>
+<div id="checkoutModal" class="modal hidden"><div class="modal-card"><button class="modal-close" id="closeModal">&times;</button><span class="eyebrow">CHECKOUT</span><h2 id="checkoutTitle">Order produce</h2><p id="checkoutFarmer" class="muted"></p><div class="form-grid"><label>Produce<select id="checkoutProduce"></select></label><label>Quantity<input id="checkoutQty" type="number" min="1" value="1"></label><label>Payment type
+<select id="checkoutPaymentType">
+<option value="wallet">Mobile Wallet</option>
+<option value="bank">Bank</option>
+</select>
+</label>
+<label id="checkoutBankWrap" class="payment-dependent hidden">Bank
+<select id="checkoutBank">
+<option value="FNB Botswana">FNB Botswana</option>
+<option value="ABSA Botswana">ABSA Botswana</option>
+<option value="Stanbic Bank">Stanbic Bank</option>
+<option value="Standard Chartered">Standard Chartered</option>
+<option value="Bank Gaborone">Bank Gaborone</option>
+</select>
+</label>
+<label id="checkoutWalletWrap" class="payment-dependent">Mobile wallet
+<select id="checkoutWallet">
+<option value="Orange Money">Orange Money</option>
+<option value="MyZaka">MyZaka</option>
+<option value="Smega">Smega</option>
+</select>
+</label>
+<label id="checkoutDetailsWrap">Account / mobile number
+<input id="checkoutPaymentDetails" placeholder="Enter account number or mobile number">
+</label>
+<div id="paymentProviderPreview" class="payment-provider-preview"></div></div><div class="checkout-total"><span>Estimated total</span><strong id="checkoutTotal">P0.00</strong></div><button id="confirmCheckout" class="btn btn-primary btn-block">Confirm simulated payment</button><p class="small muted">No real funds are moved in this prototype.</p></div></div>
+<footer class="footer"><div class="container footer-bottom">© <span data-year></span> Botswana Harvest Hub · Prototype</div></footer>
+<script src="assets/app.js"></script><script src="assets/data.js"></script><script src="assets/market.js"></script>
+</body></html>

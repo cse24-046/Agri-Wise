@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Botswana Harvest Hub | Farm to Market</title>
+  <meta name="description" content="Botswana Harvest Hub connects farmers and consumers through seasonal produce, marketplace listings and simulated mobile-wallet payments.">
+  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body data-page="home">
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="index.html"><span class="brand-mark">BH</span><span>Botswana Harvest Hub</span></a>
+    <button class="mobile-toggle" aria-label="Open menu"><i class="fa fa-bars"></i></button>
+    <nav class="nav">
+      <a class="active" href="index.html">Home</a>
+      <a data-role="farmer" href="farmer.html">Farmer Dashboard</a>
+      <a data-role="consumer" href="market.html">Marketplace</a>
+      <a href="signup.html" data-account>Sign in</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow">FARM TO MARKET • BOTSWANA</span>
+      <h1>Grow smarter.<br><em>Sell better.</em><br>Eat local.</h1>
+      <p class="lead">A digital home for Botswana farmers and consumers — seasonal growing guidance, local produce stalls and one place to manage your payment details.</p>
+      <div class="actions">
+        <a class="btn btn-primary" data-role="farmer" href="farmer.html">Farmer dashboard <i class="fa fa-arrow-right"></i></a>
+        <a class="btn btn-secondary" data-role="consumer" href="market.html">Browse marketplace</a>
+        <a class="btn btn-outline" href="signup.html">Get started</a>
+      </div>
+      <div class="trust-row"><span><i class="fa fa-seedling"></i> Seasonal crops</span><span><i class="fa fa-location-dot"></i> Botswana locations</span><span><i class="fa fa-wallet"></i> Mobile wallets</span></div>
+    </div>
+    <div class="hero-art">
+      <div class="sun"></div>
+      <div class="field field-1"></div><div class="field field-2"></div><div class="field field-3"></div>
+      <div class="hero-card floating">
+        <div class="mini-label">IN SEASON NOW</div>
+        <strong id="heroSeason">Loading…</strong>
+        <span id="heroMonths">—</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-heading"><div><span class="eyebrow">ONE PLATFORM, TWO SIDES</span><h2>Built around the people who grow and buy.</h2></div></div>
+    <div class="split-grid">
+      <article class="feature-card farmer-card">
+        <div class="icon-box"><i class="fa fa-tractor"></i></div>
+        <span class="eyebrow">FOR FARMERS</span>
+        <h3>Your farm, your money, your market.</h3>
+        <p>Track simulated balances across Orange Money, Smega, MyZaka and bank accounts, advertise your stall, and use seasonal guidance to plan your next crop.</p>
+        <ul class="check-list"><li>Wallet and bank overview</li><li>Cross-network transfer simulation</li><li>AI market advisor</li><li>Loan-readiness checklist</li></ul>
+        <a class="text-link" href="farmer.html">Open farmer dashboard <i class="fa fa-arrow-right"></i></a>
+      </article>
+      <article class="feature-card consumer-card">
+        <div class="icon-box"><i class="fa fa-basket-shopping"></i></div>
+        <span class="eyebrow">FOR CONSUMERS</span>
+        <h3>Find fresh produce near you.</h3>
+        <p>Explore advertised farmers and produce stalls, filter by Botswana location and crop, and keep your preferred payment details in one profile.</p>
+        <ul class="check-list"><li>Search local stalls</li><li>Filter by location and produce</li><li>View farmer contact/payment details</li><li>Shopping basket and checkout simulation</li></ul>
+        <a class="text-link" href="market.html">Explore marketplace <i class="fa fa-arrow-right"></i></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="season-band">
+  <div class="container">
+    <div class="season-head"><div><span class="eyebrow">BOTSWANA GROWING CALENDAR</span><h2 id="seasonName">—</h2><p id="seasonMonths">—</p></div><a class="btn btn-light" href="market.html">Find seasonal produce</a></div>
+    <p id="seasonNote" class="season-note"></p>
+    <div id="seasonGrid" class="produce-grid"></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-heading"><div><span class="eyebrow">WHY HARVEST HUB</span><h2>Closing the gap from field to buyer.</h2></div></div>
+    <div class="stats-grid">
+      <div class="stat-card"><strong>01</strong><h3>Seasonal intelligence</h3><p>Use a simple Botswana growing calendar to understand what crops fit the current and next season.</p></div>
+      <div class="stat-card"><strong>02</strong><h3>Wallet visibility</h3><p>See multiple payment rails in one dashboard. Transfers are simulated for this prototype.</p></div>
+      <div class="stat-card"><strong>03</strong><h3>Local discovery</h3><p>Consumers can find farmers and stalls by town or village instead of searching blindly.</p></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer"><div class="container footer-grid"><div><a class="brand brand-light" href="index.html"><span class="brand-mark">BH</span>Botswana Harvest Hub</a><p>Seasonal produce, local farmers and digital tools for Botswana.</p></div><div><h4>Platform</h4><a href="farmer.html">Farmer dashboard</a><a href="market.html">Marketplace</a><a href="signup.html">Account</a></div><div><h4>Payments</h4><span>Orange Money</span><span>Smega</span><span>MyZaka</span></div></div><div class="container footer-bottom">© <span data-year></span> Botswana Harvest Hub · Prototype</div></footer>
+<script src="assets/app.js"></script>
+<script src="assets/data.js"></script>
+<script src="assets/home.js"></script>
+</body>
+</html>
