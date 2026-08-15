@@ -39,4 +39,13 @@
 .typing-dots i{width:7px;height:7px;background:#bfc9c1;border-radius:50%;display:inline-block;animation:dot 1s infinite ease-in-out;opacity:.6}
 .typing-dots i:nth-child(2){animation-delay:.15s}
 .typing-dots i:nth-child(3){animation-delay:.3s}
+
+/* Premium offer styles */
+.premium-offer{padding:40px 0;background:linear-gradient(180deg,rgba(247,244,238,0.6),rgba(255,255,255,0.6));}
+.premium-card{display:block;border:1px solid var(--line);padding:24px;border-radius:14px;background:linear-gradient(180deg,#fff,#fbfbfb);box-shadow:0 14px 40px rgba(33,77,59,.06)}
+.premium-card .panel-head{align-items:center}
+.premium-card h2{font-size:22px;margin:6px 0}
+.premium-card p{max-width:860px}
+.premium-card .btn{padding:10px 16px}
+.premium-card .muted.small{opacity:.9}
 @keyframes dot{0%{transform:translateY(0);opacity:.4}50%{transform:translateY(-6px);opacity:1}100%{transform:translateY(0);opacity:.4}}

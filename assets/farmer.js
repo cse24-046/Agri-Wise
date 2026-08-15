@@ -61,8 +61,38 @@ document.addEventListener("DOMContentLoaded",()=>{
 	}
 
 	document.getElementById("chatForm").addEventListener("submit", event=>{
-		event.preventDefault();
-		const input = document.getElementById("chatInput"), question = input.value.trim();
-		if(question){ ask(question); input.value = "" }
+					event.preventDefault();
+					const input = document.getElementById("chatInput"), question = input.value.trim();
+					if(question){ ask(question); input.value = "" }
+			});
+
+			// Inject premium subscription section before the footer (if not already present)
+			if(!document.querySelector('.premium-offer')){
+					const footer = document.querySelector('footer');
+					if(footer && footer.parentNode){
+							const sec = document.createElement('section');
+							sec.className = 'premium-offer section';
+							sec.innerHTML = `
+									<div class="container">
+										<div class="premium-card feature-card">
+											<div class="panel-head">
+												<div>
+													<span class="eyebrow">PREMIUM AI</span>
+													<h2>Agri-Wise Premium — Insights + Financial Planning</h2>
+												</div>
+												<span class="tag">Upgrade</span>
+											</div>
+											<p class="muted">Upgrade to Agri-Wise Premium for expanded AI briefings that combine seasonal crop intelligence with simple financial planning: cost estimates, revenue scenarios, break-even analysis and risk-adjusted recommendations.</p>
+											<div style="margin-top:18px;display:flex;gap:12px;flex-wrap:wrap;align-items:center">
+												<a class="btn btn-primary" href="auth.html?plan=premium">Start 14‑day trial</a>
+												<a class="btn btn-outline" href="auth.html?plan=premium">Subscribe / Manage</a>
+												<span class="muted" style="font-size:13px;margin-left:8px">Includes extended reports and exportable summaries.</span>
+											</div>
+											<p class="muted small" style="margin-top:12px">Disclaimer: Premium features provide general financial planning tools and scenario estimates. This is not personalised financial advice — consult a licensed financial adviser for tailored recommendations.</p>
+										</div>
+									</div>
+							`;
+							footer.parentNode.insertBefore(sec, footer);
+					}
+			}
 	});
-});
