@@ -29,7 +29,7 @@
 .logout-button{padding:9px 14px}
 
 /* Replace textual brand with image logo (use assets/AgriWise.jpg). */
-.brand{display:inline-block;background:url("assets/AgriWise.jpg") left center no-repeat;padding-left:48px;min-height:36px;color:transparent}
+.brand{display:inline-block;background:url("AgriWise.jpg") left center no-repeat;padding-left:48px;min-height:36px;color:transparent}
 .brand .brand-mark{display:none}
 .brand-logo{height:36px;display:block}
 
