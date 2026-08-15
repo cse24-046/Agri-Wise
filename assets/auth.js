@@ -21,8 +21,8 @@ document.addEventListener("DOMContentLoaded",()=>{
 			<h2>Complete subscription — ${selectedPlan ? selectedPlan.toUpperCase() : 'PREMIUM'}</h2>
 			<p class="muted small">${amount} — Enter card details or choose PayPal to complete your subscription.</p>
 			<div class="payment-methods" style="display:flex;gap:8px;margin:10px 0">
-				<button type="button" class="pmethod active" data-method="card">Card (Visa, MasterCard, Amex)</button>
-				<button type="button" class="pmethod" data-method="paypal">PayPal</button>
+				<button type="button" class="pmethod active" data-method="card"><span class="pm-icon">Card</span><span class="accepted-cards"><i class="fa-brands fa-cc-visa"></i><i class="fa-brands fa-cc-mastercard"></i><i class="fa-brands fa-cc-amex"></i></span></button>
+				<button type="button" class="pmethod" data-method="paypal"><i class="fa-brands fa-cc-paypal"></i> PayPal</button>
 			</div>
 			<form id="checkout" style="margin-top:8px">
 				<div class="card-fields">
