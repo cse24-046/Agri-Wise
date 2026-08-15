@@ -1,5 +1,8 @@
 document.addEventListener("DOMContentLoaded",()=>{
 	if(!APP.requireUser()) return;
+	// remove dashboard subtitle added in HTML
+	const subtitle = document.querySelector('.dashboard-top .muted');
+	if(subtitle && subtitle.textContent.includes('Your dashboard for demand')) subtitle.remove();
 	const user = APP.user(), season = HH.currentSeason(), next = HH.nextSeason(), crops = HH.seasonCrops();
 
 	document.getElementById("welcomeMessage").textContent = `Welcome, ${user.name}.`;
