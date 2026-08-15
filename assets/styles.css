@@ -30,7 +30,7 @@
 
 /* Brand/logo: show image if present, keep text fallback */
 .brand{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--green);letter-spacing:-.02em}
-.brand-logo{height:56px;display:block;width:auto}
+.brand-logo{height:80px;display:block;width:auto}
 
 /* Welcome message color using swatch reference (gold) */
 .dashboard-top #welcomeMessage{color:var(--gold);}
