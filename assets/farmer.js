@@ -85,13 +85,13 @@ document.addEventListener("DOMContentLoaded",()=>{
 								<h4>Monthly</h4>
 								<strong class="price">P70 <small>/ month</small></strong>
 								<p class="muted small">Billed monthly. Cancel anytime.</p>
-								<a class="btn btn-primary" href="auth.html?plan=premium&billing=monthly">Subscribe P70/mo</a>
+								<a class="btn btn-primary" href="payment.html?plan=premium&billing=monthly">Subscribe P70/mo</a>
 							</div>
 							<div class="price-card feature-card">
 								<h4>Yearly</h4>
 								<strong class="price">P500 <small>/ year</small></strong>
 								<p class="muted small">Billed annually. Save vs monthly.</p>
-								<a class="btn btn-outline" href="auth.html?plan=premium&billing=yearly">Subscribe P500/yr</a>
+								<a class="btn btn-outline" href="payment.html?plan=premium&billing=yearly">Subscribe P500/yr</a>
 							</div>
 						</div>
 						<p class="muted small" style="margin-top:10px">Disclaimer: Premium features provide general financial planning tools and scenario estimates. This is not personalised financial advice — consult a licensed financial adviser for tailored recommendations.</p>

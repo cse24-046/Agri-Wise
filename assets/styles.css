@@ -58,3 +58,18 @@
 .price-card p{margin:0}
 .price-card .btn{width:100%}
 @keyframes dot{0%{transform:translateY(0);opacity:.4}50%{transform:translateY(-6px);opacity:1}100%{transform:translateY(0);opacity:.4}}
+
+/* Payment form styles */
+.payment-card{padding:20px;border-radius:12px;border:1px solid var(--line);background:white;margin-top:18px}
+.payment-methods .pmethod{padding:8px 12px;border-radius:9px;border:1px solid #e6ebe5;background:#fbfbfb;font-weight:700}
+.payment-methods .pmethod.active{background:var(--green);color:white;border-color:var(--green)}
+.card-fields label{margin-bottom:8px}
+.card-fields input{font-size:15px}
+
+/* spinner */
+.spinner{display:inline-block;width:14px;height:14px;border:2px solid rgba(0,0,0,.12);border-top-color:var(--green);border-radius:50%;animation:spin .8s linear infinite;margin-right:8px}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* receipt modal tweaks */
+.modal-card h3{margin-top:0}
+.receipt{margin-top:10px;padding:12px;border-radius:10px;background:#f6f7f4;border:1px solid var(--line)}
